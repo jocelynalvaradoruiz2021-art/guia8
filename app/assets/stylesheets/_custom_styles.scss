@@ -1,0 +1,198 @@
+/* app/assets/stylesheets/custom_styles.scss */
+
+/* =========================
+   Variables de colores
+========================= */
+$primary-color: #0d6efd;   // Azul Bootstrap
+$secondary-color: #6c757d; // Gris
+$success-color: #198754;   // Verde
+$danger-color: #dc3545;    // Rojo
+$warning-color: #ffc107;   // Amarillo
+$info-color: #0dcaf0;      // Celeste
+$light-color: #f8f9fa;
+$dark-color: #212529;
+
+/* =========================
+   Body y tipografía
+========================= */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: $light-color;
+  color: $dark-color;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   Botones personalizados
+========================= */
+.btn-custom {
+  background-color: $primary-color;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.5);
+  }
+}
+
+/* =========================
+   Tarjetas personalizadas
+========================= */
+.card-custom {
+  border: 1px solid #dee2e6;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: white;
+
+  .card-title {
+    color: $primary-color;
+    font-weight: bold;
+  }
+
+  .card-text {
+    color: $dark-color;
+  }
+}
+
+/* =========================
+   Tablas
+========================= */
+.table-custom {
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  th {
+    background-color: $primary-color;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: lighten($primary-color, 40%);
+  }
+
+  tr:hover {
+    background-color: lighten($primary-color, 30%);
+  }
+}
+
+/* =========================
+   Formularios
+========================= */
+.form-control-custom {
+  border: 1px solid $secondary-color;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 0 0.2rem rgba(13,110,253,0.25);
+    outline: none;
+  }
+}
+
+/* =========================
+   Encabezados
+========================= */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: $primary-color;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   Links
+========================= */
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* =========================
+   Navbar personalizada
+========================= */
+.navbar-custom {
+  background-color: #000; /* Franja negra */
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: white;
+    margin: 0 1rem; /* separación entre links */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #ffc107; /* amarillo al pasar el mouse */
+    }
+  }
+}
+
+/* Opcional: logo a la izquierda */
+.navbar-brand {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  &:hover {
+    color: #ffc107;
+  }
+}
+.navbar {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.nav-link {
+  color: #fff !important;
+  margin-left: 1rem;
+
+  &:hover {
+    color: #ffc107 !important;
+  }
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Centra verticalmente */
+  align-items: center;      /* Centra horizontalmente */
+  text-align: center;
+  min-height: 80vh;         /* Ocupa el 80% del alto de la pantalla */
+}
+
+.home-container h1 {
+  color: #0d6efd; /* azul Bootstrap */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.home-container p {
+  font-size: 1.25rem;
+  color: #555;
+}
